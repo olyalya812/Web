@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: cornsilk;
+    }
+div {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: burlywood;
+}
+</style>
+</head>
+<body>
+
+<div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  var position = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = position;
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
